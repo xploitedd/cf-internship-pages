@@ -54,7 +54,7 @@ const App: React.FC<{}> = () => {
                 .map((p, pId) => (<p key={pId}>{p}</p>))
 
             return (
-                <Post key={`post-${id}`} title={post.title} user={post.username} votes={post.votes} updateVotes={type => updateVotes({ id, type })}>
+                <Post key={`post-${posts.length - id}`} title={post.title} user={post.username} votes={post.votes} updateVotes={type => updateVotes({ id, type })}>
                     {paragraphs}
                 </Post>
             )
